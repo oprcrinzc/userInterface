@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
+      {/* <script src="js/updateRange.js"></script> */}
       </body>
     </html>
   );
