@@ -13,7 +13,7 @@ export default function FetchDataComponent(props) {
   // Fetch function to call API
   const fetchData = async () => {
     try {
-      const response = await fetch('http://192.168.21.185:8888/fetch/workers/'); // Replace with your API endpoint
+      const response = await fetch('http://192.168.118.185:8888/fetch/workers/'); // Replace with your API endpoint
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
