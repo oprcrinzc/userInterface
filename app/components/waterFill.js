@@ -3,7 +3,7 @@
 import Card from "./card"
 import { useEffect, useState, useRef } from "react"
 
-export default function waterFill(props){
+export default function WaterFill(props){
     const [FillAt, setFillAt] = useState(props.water_level_to_fill)
     const [Until, setUntil] = useState(props.water_level_target)
 
@@ -18,8 +18,8 @@ export default function waterFill(props){
 
     const updateWaterLevelTarget = async () => {
       try {
-        const response = await fetch(`http://192.168.21.185:8888/update/workers/${props.name}`, {
-          method: "POST",
+        const response = await fetch(`http://192.168.118.185:8888/update/workers/${props.name}`, {
+          method: "PUT",
           headers: {
               "Content-Type": "application/json", // Set appropriate headers for JSON payload
             },
@@ -41,8 +41,8 @@ export default function waterFill(props){
 
     const updateWaterLevelToFill = async () => {
       try {
-        const response = await fetch(`http://192.168.21.185:8888/update/workers/${props.name}`, {
-          method: "POST",
+        const response = await fetch(`http://192.168.118.185:8888/update/workers/${props.name}`, {
+          method: "PUT",
           headers: {
               "Content-Type": "application/json", // Set appropriate headers for JSON payload
             },

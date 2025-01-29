@@ -46,13 +46,14 @@ export default function FetchDataComponent(props) {
           {
             Array.isArray(data)?
             data.map((element, index) => {
-              return <div key={index} className={Style.c1}>
-                <p>{element["name"]}</p>
-                <div>
-                  <p>{element["temperature"]} °C</p>
-                  <p>{element["humidity"]} %</p>
-                </div>
+              return <div key={index} className={Style.c1} onClick={()=>document.location.href = (`/${element["name"]}`)}>
+              <p>{element["name"]}</p>
+              <div>
+                <div className="twoBIG"><p>{element["temperature"]}</p><p>°C</p></div>
+                <div className="twoBIG"><p>{element["humidity"]}</p><p>%</p></div>
+                <div className="twoBIG"><p>{element["water_level"]}</p><p>%</p></div>
               </div>
+            </div>
             }):"Loading . . ."
           }
         </div> 

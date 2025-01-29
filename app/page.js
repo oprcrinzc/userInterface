@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-      <FetchDataComponent mode="individual" who="esp32_0"/>
+      <FetchDataComponent mode="card"/>
       </main>
     </div>
   );
